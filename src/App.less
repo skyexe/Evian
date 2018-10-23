@@ -1,0 +1,212 @@
+@import "config";
+//样式重置
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: @mainTextColor;
+  background-color: #223333;
+  font-family: 'Trajanpro', 'Times new roman' !important;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
+//头部
+.header-top {
+  height: @headerTop;
+  width: 100%;
+  &:after {
+    content: '';
+    position: fixed;
+    height: @headerTop+1;
+    width: 100%;
+    background: #fff;
+    z-index: 3;
+  }
+}
+
+.header-wrap {
+  height: @header;
+  .mu-appbar {
+    position: fixed;
+    //top: @headerTop;
+    height: @header;
+    padding: 0;
+    background: @bgColor;
+    color: @mainTextColor;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .text-wrap {
+    display: table;
+    margin: 0 auto;
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  &.has-search-bar {
+    .mu-appbar-title {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .mu-appbar-title {
+    //line-height: @header;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    color: @mainTextColor;
+    .icon-Vin-logo-title {
+      height: 30px;
+      font-size: 11.4rem;
+      color: @logoColor;
+    }
+  }
+  .icon {
+    width: 44px;
+    height: 44px;
+    //line-height: 44px;
+    text-align: center;
+    &.icon-Vin-like {
+      font-size: 1.8rem;
+    }
+    &.icon-Vin-back, &.icon-Vin-search {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+//页面容器
+.page-wrap {
+  max-width: @standardWidth;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+//浮动
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+//图片宽高设定
+.height-full {
+  width: auto;
+  height: 100%;
+}
+
+.width-full {
+  width: 100%;
+  height: auto;
+}
+
+//居中样式
+.text-center {
+  text-align: center;
+}
+
+.abs-middle {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+}
+
+.abs-all-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+//文本居中
+.line-middle {
+  display: table;
+  .line-middle-text {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+//单行文本溢出省略
+.no-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//过渡
+.fade-enter-active, .fade-leave-active {
+  transition: all .3s
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0;
+}
+
+//弹出框Toast公用样式
+.toast-wrap {
+  width: auto !important;
+  min-width: 100px;
+  text-align: center;
+  z-index: 20141223;
+  top: 50%;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+//提示框dialog公用样式
+.mu-dialog {
+  .btn {
+    flex: 1;
+    text-align: center;
+    color: @mainTextColor;
+  }
+}
+
+//进度条公用样式
+.mu-circular-progress {
+  position: fixed !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+//refresh公用样式
+.mu-refresh-control {
+  color: @logoColor !important;
+}
+
+.mu-circle-spinner {
+  border-color: @logoColor !important;
+}
+
+//infinite scroll公用样式
+.infinite-scroll-container {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mu-infinite-scroll {
+  padding: 8px 0;
+}

@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Vin-Icon';
+  src:  url('fonts/Vin-Icon.eot?c7lzbg');
+  src:  url('fonts/Vin-Icon.eot?c7lzbg#iefix') format('embedded-opentype'),
+    url('fonts/Vin-Icon.ttf?c7lzbg') format('truetype'),
+    url('fonts/Vin-Icon.woff?c7lzbg') format('woff'),
+    url('fonts/Vin-Icon.svg?c7lzbg#Vin-Icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Vin-Icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Vin-to-top2:before {
+  content: "\e90f";
+}
+.icon-Vin-non-image:before {
+  content: "\e900";
+}
+.icon-Vin-back:before {
+  content: "\e901";
+}
+.icon-Vin-close:before {
+  content: "\e902";
+}
+.icon-Vin-delete:before {
+  content: "\e903";
+}
+.icon-Vin-go:before {
+  content: "\e904";
+}
+.icon-Vin-like:before {
+  content: "\e905";
+}
+.icon-Vin-like2:before {
+  content: "\e906";
+}
+.icon-Vin-logo-title:before {
+  content: "\e907";
+}
+.icon-Vin-save:before {
+  content: "\e908";
+}
+.icon-Vin-search:before {
+  content: "\e909";
+}
+.icon-Vin-slide:before {
+  content: "\e90a";
+}
+.icon-Vin-tick:before {
+  content: "\e90b";
+}
+.icon-Vin-to-top:before {
+  content: "\e90c";
+}
+.icon-Vin-triangle:before {
+  content: "\e90d";
+}
+.icon-Vin-wechat:before {
+  content: "\e90e";
+}

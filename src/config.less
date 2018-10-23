@@ -1,0 +1,66 @@
+@headerTop: 0px;
+@header: 44px;
+@enterTabsHeight: 40px;
+@standardWidth: 640px;
+
+@logoColor: #A39B8B;
+@bgColor: #fff;
+@mainTextColor: #2e3541;
+@mainDarkColor: #35363C;
+@mainBgColor: @mainDarkColor;
+@heightLightTextColor: #ff5757;
+@nonColor: #f1f1f1;
+@wechatGreen: #01A70C;
+
+@textDark00: #43464c;
+@textDark01: #606467;
+@textGrey00: #757a82;
+@textGrey01: #a4a9b2;
+@textGrey02: #b6b2be;
+@textRed00: #E4003F;
+
+@borderDark00: #2e3541;
+@borderDark01: #6A6A6A;
+@borderGrey00: #CDCED2;
+@borderGrey01: #eee;
+@borderGrey02: #e0e0e0;
+
+@bgGrey00: #CDCED2;
+@bgGrey01: #F0F0F0;
+
+//0.5px边框
+.border-top(@color) {
+  .border-init(0, false);
+}
+
+.border-btm(@color) {
+  .border-init(200%, false);
+}
+
+.border-top-btm(@color) {
+  .border-init(200%, true);
+}
+
+.border-init(@height,@moreBorder) {
+  position: relative;
+  &:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: @height;
+    box-sizing: border-box;
+    transform: scale(.5, .5);
+    -webkit-transform: scale(.5, .5);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    border-bottom: 1px solid @color;
+    .more-border(@color, @moreBorder);
+  }
+  .more-border(@color,@bool) when (@bool) {
+    border-top: 1px solid @color;
+  }
+}
+
